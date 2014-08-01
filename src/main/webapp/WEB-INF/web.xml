@@ -35,8 +35,19 @@
 		<servlet-name>endoingtTest</servlet-name>
 		<url-pattern>/endoingtTest</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>servlet_upload</servlet-name>
+		<servlet-class>cn.ws.servlet.WsFileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>servlet_upload</servlet-name>
+		<url-pattern>/servlet_upload</url-pattern>
+	</servlet-mapping>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.apache.commons.fileupload.servlet.FileCleanerCleanup</listener-class>
 	</listener>
 	<welcome-file-list>
 		<welcome-file>
